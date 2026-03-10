@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="logo">ADMIN DASH</div>
+        <nav>
+    <ul>
+        <li><a href="#">📊 Overview</a></li>
+        <li><a href="#classes">🩰 Class Registration</a></li>
+        <li><a href="#dress-code">👗 Dress Codes</a></li>
+        <li><a href="#recital">🎬 Recital & Competitions</a></li>
+        <li><a href="#">💬 Instructor Chat</a></li>
+        <li class="logout"><a href="#">🚪 Logout</a></li>
+    </ul>
+</nav>
+
+    </aside>
+
+    <main id="main-content">
+        <header>
+            <button id="menu-toggle">☰ Menu</button>
+            <div class="controls">
+                <button id="theme-toggle">🌙 Dark Mode</button>
+                <span>Welcome, <strong>Admin</strong></span>
+            </div>
+        </header>
+
+        <!-- Dance Studio Specific Sections -->
+<section class="dashboard-grid" style="margin-top: 20px;">
+    
+    <!-- Class Registration -->
+    <div class="card" id="classes">
+        <h3>Class Registration</h3>
+        <ul class="dance-list">
+            <li><strong>Ballet II:</strong> Mon/Wed @ 4pm <button class="btn-sm">Register</button></li>
+            <li><strong>Jazz Advanced:</strong> Tue/Thu @ 6pm <button class="btn-sm">Register</button></li>
+            <li><strong>Hip Hop:</strong> Friday @ 5pm <span class="status-tag">Enrolled</span></li>
+        </ul>
+    </div>
+
+    <!-- Dress Codes -->
+    <div class="card" id="dress-code">
+        <h3>Dress Codes</h3>
+        <p><small>Required for all 2024 sessions:</small></p>
+        <div class="code-item"><strong>Ballet:</strong> Pink tights, Black leotard, Hair in bun.</div>
+        <div class="code-item"><strong>Jazz:</strong> Tan slip-on shoes, Studio leggings.</div>
+        <a href="#" style="color: var(--primary);">Download PDF Guide</a>
+    </div>
+
+    <!-- Recital & Competition Tracker -->
+    <div class="card" id="recital">
+        <h3>Recital Participation</h3>
+        <div class="participation-tracker">
+            <p><strong>Winter Showcase:</strong> "The Nutcracker"</p>
+            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            <p><small>Costume: Arrived ✅ | Rehearsal: Dec 12</small></p>
+        </div>
+    </div>
+</section>
+<section class="stats-overview">
+    <div class="stat-card">
+        <span class="icon">👥</span>
+        <div>
+            <h4>Total Students</h4>
+            <p>148</p>
+            <small class="trend up">↑ 12% this month</small>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="icon">🩰</span>
+        <div>
+            <h4>Active Classes</h4>
+            <p>24</p>
+            <small>Across 4 Genres</small>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="icon">🏆</span>
+        <div>
+            <h4>Comp. Readiness</h4>
+            <p>82%</p>
+            <small>Average Choreography</small>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="icon">💰</span>
+        <div>
+            <h4>Pending Fees</h4>
+            <p>$1,240</p>
+            <small class="trend down">↓ 5% from last week</small>
+        </div>
+    </div>
+</section>
+
+<!-- 1. TOP METRICS GRID -->
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-info">
+            <h4>Total Products</h4>
+            <p class="stat-number">287</p>
+            <a href="#" class="stat-link">Details</a>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <h4>New Products</h4>
+            <p class="stat-number">14</p>
+            <a href="#" class="stat-link">Details</a>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <h4>Total Instructors</h4>
+            <p class="stat-number">25</p>
+            <a href="#" class="stat-link">Details</a>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-info">
+            <h4>Students Enrolled</h4>
+            <p class="stat-number">1,457</p>
+            <a href="#" class="stat-link">Details</a>
+        </div>
+    </div>
+</section>
+
+<!-- 2. UPCOMING CLASSES TABLE -->
+<section class="dashboard-main-row">
+    <div class="glass-card upcoming-classes">
+        <h3>Upcoming Classes</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class #</th>
+                        <th>Class Name</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id-cell">1451</td>
+                        <td>Interaction Design Studio 1</td>
+                        <td>9 am - 12 pm</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">2472</td>
+                        <td>Programming Usable Interfaces</td>
+                        <td>1 pm - 2:30 pm</td>
+                    </tr>
+                    <tr>
+                        <td class="id-cell">9871</td>
+                        <td>Software Structures for User Interfaces</td>
+                        <td>3 pm - 4:50 pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 1. REVENUE SUMMARY CARD -->
+<div class="glass-card revenue-summary">
+    <div class="card-header">
+        <h3>Revenue Summary</h3>
+        <div class="date-selector">
+            <button class="active">May</button>
+            <button>April</button>
+            <button>March</button>
+        </div>
+    </div>
+
+    <div class="revenue-content">
+        <!-- Donut Chart -->
+        <div class="donut-container">
+            <canvas id="revenueChart"></canvas>
+        </div>
+
+        <!-- Metric Details -->
+        <div class="revenue-metrics">
+            <div class="metric-item">
+                <span class="value">$8,360.00 <i class="trend-up">↑</i></span>
+                <span class="label">Total Revenue</span>
+            </div>
+            <div class="metric-item">
+                <span class="value">42 <i class="trend-down">↓</i></span>
+                <span class="label">Total Courses</span>
+            </div>
+            <div class="metric-item">
+                <span class="value">214 <i class="trend-up">↑</i></span>
+                <span class="label">Total Products</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ 
+      </main>
+      
+   <script src="admin.js"></script>
+
+   
+    </body>
+   
+    </html>
