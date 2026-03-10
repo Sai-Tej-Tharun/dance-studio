@@ -1,0 +1,165 @@
+/*register*/
+:root {
+  /* Default: Dark Mode colors as per your image */
+  --glass-text-primary: #ffffff;
+  --glass-text-secondary: rgba(255, 255, 255, 0.7);
+  --input-border-color: rgba(255, 255, 255, 0.3);
+  --placeholder-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] {
+  /* Light Mode overrides */
+  --glass-text-primary: #1a1a1a;
+  --glass-text-secondary: #4a4a4a;
+  --input-border-color: rgba(0, 0, 0, 0.2);
+  --placeholder-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Apply variables to the Glass Side */
+.side-glass h3 {
+  color: var(--glass-text-primary);
+  transition: color 0.3s ease;
+}
+
+.side-glass .glass-form input, 
+.side-glass .glass-select {
+  color: var(--glass-text-primary);
+  border-bottom: 1px solid var(--input-border-color);
+  transition: all 0.3s ease;
+}
+
+/* Update placeholder color */
+.side-glass input::placeholder {
+  color: var(--placeholder-color);
+}
+
+/* Keep the Gradient Side text white for contrast */
+.side-gradient h2, 
+.side-gradient p {
+  color: #ffffff; 
+}
+
+.registration-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('register.jpg') center/cover; /* Replace with your background */
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  max-width: 900px;
+  height: 550px;
+  background-color: transparent;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Flip Trigger Class */
+.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Left Side: Gradient */
+.side-gradient {
+  flex: 1;
+  background: linear-gradient(135deg, #7c4dff, #ab47bc);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Right Side: Glass */
+.side-glass {
+  flex: 1.2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Elements Styling */
+h2, h3 { margin-bottom: 20px;  }
+p { opacity: 0.8; margin-bottom: 30px; line-height: 1.6; }
+
+.glass-form input, .glass-select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 12px 0;
+  margin-bottom: 20px;
+  color: white;
+  outline: none;
+}
+
+::placeholder { color: rgba(255,255,255,0.6); }
+
+/* Buttons & Hovers */
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #7c4dff;
+}
+
+.btn-pink {
+  background: linear-gradient(90deg, #f06292, #ec4899);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-pink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .flip-card-front, .flip-card-back { flex-direction: column; }
+  .flip-card { height: 800px; }
+}
+
